@@ -1,4 +1,8 @@
-# XiGameEngine
+#Xi Game Engine
+
+This is an old 3D game engine I made for XNA 3.1.
+
+I'm updating some bits for resume fodder, but I don't see this code as worth using directly.
 
 Xi Game Engine Feature / Motivation List
 
