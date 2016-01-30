@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <!--Add user-defined overlays here...-->
+
+  <!--Default overlays.-->
+  
+  <Xi.Overlayable.Default />
+  
+  <Xi.Serializable.Default>
+    <Inherits>Xi.Overlayable.Default</Inherits>
+    <Persistence>Persistent</Persistence>
+  </Xi.Serializable.Default>
+  
+  <Xi.Recyclable.Default>
+    <Inherits>Xi.Serializable.Default</Inherits>
+    <RecycleBinName />
+  </Xi.Recyclable.Default>
+  
+  <Xi.Focusable.Default>
+    <Inherits>Xi.Recyclable.Default</Inherits>
+    <FocusIndex />
+  </Xi.Focusable.Default>
+  
+  <Xi.Simulatable.Default>
+    <Inherits>Xi.Focusable.Default</Inherits>
+    <DesignTimeData></DesignTimeData>
+    <Name />
+    <Enabled>True</Enabled>
+    <Visible>True</Visible>
+    <Frozen>False</Frozen>
+  </Xi.Simulatable.Default>
+  
+  <!--Default facet overlays.-->
+  
+  <Xi.Facet.Default>
+    <Inherits>Xi.Simulatable.Default</Inherits>
+  </Xi.Facet.Default>
+  
+  <!--Default facet 3D overlays.-->
+  
+  <Xi.CameraTracker.Default>
+    <Inherits>Xi.Facet.Default</Inherits>
+  </Xi.CameraTracker.Default>
+  
+  <Xi.TimedSpawner.Default>
+    <Inherits>Xi.Facet.Default</Inherits>
+    <SpawnOffset>0, 0, 0</SpawnOffset>
+    <SpawnDelay>1</SpawnDelay>
+    <SpawnTimer>0</SpawnTimer>
+    <SpawnDefinition />
+  </Xi.TimedSpawner.Default>
+  
+  <!--Default actor overlays.-->
+  
+  <Xi.Actor.Default>
+    <Inherits>Xi.Simulatable.Default</Inherits>
+  </Xi.Actor.Default>
+  
+  <!--Default actor UI overlays.-->
+  
+  <Xi.ActorUI.Default>
+    <Inherits>Xi.Actor.Default</Inherits>
+    <Position>0, 0, 0</Position>
+  </Xi.ActorUI.Default>
+  
+  <Xi.Label.Default>
+    <Inherits>Xi.ActorUI.Default</Inherits>
+    <SurfaceFileName>Xi/UI/LabelImage</SurfaceFileName>
+  </Xi.Label.Default>
+  
+  <Xi.Button.Default>
+    <Inherits>Xi.ActorUI.Default</Inherits>
+    <ClickedMessageDefinitions />
+    <UnfocusedSurfaceFileName>Xi/UI/ButtonUnfocusedImage</UnfocusedSurfaceFileName>
+    <ReleasedSurfaceFileName>Xi/UI/ButtonReleasedImage</ReleasedSurfaceFileName>
+    <PressedSurfaceFileName>Xi/UI/ButtonPressedImage</PressedSurfaceFileName>
+  </Xi.Button.Default>
+  
+  <!--Default actor 2D overlays.-->
+  
+  <Xi.Actor2D.Default>
+    <Inherits>Xi.Actor.Default</Inherits>
+    <Awake>True</Awake>
+    <CollidesWith>All</CollidesWith>
+    <CollisionCategories>All</CollisionCategories>
+    <Position>0, 0, 0</Position>
+    <Rotation>0</Rotation>
+    <LinearVelocity>0, 0</LinearVelocity>
+    <LocalCenter>0, 0</LocalCenter>
+    <AngularDamping>0</AngularDamping>
+    <AngularVelocity>0</AngularVelocity>
+    <Density>1</Density>
+    <Friction>0.2</Friction>
+    <Inertia>682.6667</Inertia>
+    <LinearDamping>0</LinearDamping>
+    <Restitution>0</Restitution>
+    <AffectedByGravity>False</AffectedByGravity>
+    <CCDEnabled>False</CCDEnabled>
+    <FixedRotation>False</FixedRotation>
+    <PhysicsEnabled>True</PhysicsEnabled>
+    <Sensor>False</Sensor>
+  </Xi.Actor2D.Default>
+  
+  <Xi.Sprite.Default>
+    <Inherits>Xi.Actor2D.Default</Inherits>
+    <BodyType>Dynamic</BodyType>
+    <ImageFileName>Xi/2D/SpriteImage</ImageFileName>
+  </Xi.Sprite.Default>
+  
+  <!--Default actor 3D overlays.-->
+  
+  <Xi.Actor3D.Default>
+    <Inherits>Xi.Actor.Default</Inherits>
+    <Active>True</Active>
+    <Density>6.731949E+12</Density>
+    <Position>0, 0, 0</Position>
+    <OrientationQuaternion>0, 0, 0, 1</OrientationQuaternion>
+    <AngularMomentum>0, 0, 0</AngularMomentum>
+    <AngularVelocity>0, 0, 0</AngularVelocity>
+    <CenterOfMassOffset>0, 0, 0</CenterOfMassOffset>
+    <LinearMomentum>0, 0, 0</LinearMomentum>
+    <LinearVelocity>0, 0, 0</LinearVelocity>
+    <AllowedPenetration>0.005</AllowedPenetration>
+    <AngularDamping>0.15</AngularDamping>
+    <Bounciness>0</Bounciness>
+    <CollisionMargin>0.04</CollisionMargin>
+    <DynamicFriction>0.5</DynamicFriction>
+    <LinearDamping>0</LinearDamping>
+    <Mass>1024</Mass>
+    <StaticFriction>0.75</StaticFriction>
+    <AffectedByGravity>False</AffectedByGravity>
+    <PhysicsEnabled>True</PhysicsEnabled>
+  </Xi.Actor3D.Default>
+  
+  <Xi.Actor3D.PhysicsDisabled.Default>
+    <Inherits>Xi.Actor3D.Default</Inherits>
+    <AllowedPenetration>0</AllowedPenetration>
+    <CollisionMargin>0</CollisionMargin>
+    <Density>0</Density>
+    <PhysicsEnabled>False</PhysicsEnabled>
+  </Xi.Actor3D.PhysicsDisabled.Default>
+  
+  <Xi.Light.Default>
+    <Inherits>Xi.Actor3D.PhysicsDisabled.Default</Inherits>
+  </Xi.Light.Default>
+  
+  <Xi.AmbientLight.Default>
+    <Inherits>Xi.Light.Default</Inherits>
+    <Color>128, 128, 128, 255</Color>
+  </Xi.AmbientLight.Default>
+  
+  <Xi.DirectionalLight.Default>
+    <Inherits>Xi.Light.Default</Inherits>
+    <Direction>0, -1, 0</Direction>
+    <ShadowCameraPosition>0, 256, 0</ShadowCameraPosition>
+    <DiffuseColor>128, 128, 128, 255</DiffuseColor>
+    <SpecularColor>128, 128, 128, 255</SpecularColor>
+    <ShadowCameraOffset>256</ShadowCameraOffset>
+    <ShadowCameraSnap>4</ShadowCameraSnap>
+    <ShadowEnabled>False</ShadowEnabled>
+    <ShadowCameraRelativeToViewCamera>True</ShadowCameraRelativeToViewCamera>
+  </Xi.DirectionalLight.Default>
+  
+  <Xi.PointLight.Default>
+    <Inherits>Xi.Light.Default</Inherits>
+    <DiffuseColor>128, 128, 128, 255</DiffuseColor>
+    <SpecularColor>128, 128, 128, 255</SpecularColor>
+    <Range>64</Range>
+    <Falloff>64</Falloff>
+  </Xi.PointLight.Default>
+  
+  <Xi.BasicModel.Default>
+    <Inherits>Xi.Actor3D.Default</Inherits>
+    <BodyShape>Box</BodyShape>
+    <ModelFileName>Xi/3D/cube</ModelFileName>
+    <Density>1.024</Density>
+  </Xi.BasicModel.Default>
+  
+  <Xi.NormalMappedModel.Default>
+    <Inherits>Xi.Actor3D.Default</Inherits>
+    <BodyShape>Box</BodyShape>
+    <ModelFileName>Xi/3D/normalMappedCube</ModelFileName>
+    <Density>1.024</Density>
+  </Xi.NormalMappedModel.Default>
+  
+  <Xi.AnimatedModel.Default>
+    <Inherits>Xi.Actor3D.Default</Inherits>
+    <EmissiveColor>0, 0, 0, 0</EmissiveColor>
+    <NormalMapEnabled>True</NormalMapEnabled>
+    <SkinnedModelFileName>Xi/3D/PlayerMarine</SkinnedModelFileName>
+  </Xi.AnimatedModel.Default>
+  
+  <Xi.Skybox.Default>
+    <Inherits>Xi.Actor3D.PhysicsDisabled.Default</Inherits>
+    <DiffuseMapFileName>Xi/3D/skyCubeMap</DiffuseMapFileName>
+  </Xi.Skybox.Default>
+  
+  <Xi.Terrain.Default>
+    <Inherits>Xi.Actor3D.PhysicsDisabled.Default</Inherits>
+    <QuadScale>8, 64, 8</QuadScale>
+    <TextureRepetition>8, 8</TextureRepetition>
+    <GridDims>8, 8</GridDims>
+    <HeightMapFileName>Xi/3D/heightMap</HeightMapFileName>
+    <DiffuseMap0FileName>Xi/3D/Sand</DiffuseMap0FileName>
+    <DiffuseMap1FileName>Xi/3D/Grass</DiffuseMap1FileName>
+    <DiffuseMap2FileName>Xi/3D/Rock</DiffuseMap2FileName>
+    <DiffuseMap3FileName>Xi/3D/Snow</DiffuseMap3FileName>
+    <SmoothingFactor>1</SmoothingFactor>
+  </Xi.Terrain.Default>
+
+  <Xi.Water.Default>
+    <Inherits>Xi.Actor3D.PhysicsDisabled.Default</Inherits>
+    <Scale>1024, 1024</Scale>
+    <WaveMap0Velocity>0.1, 0</WaveMap0Velocity>
+    <WaveMap1Velocity>0, 0.1</WaveMap1Velocity>
+    <ColorMultiplier>0, 0, 139, 255</ColorMultiplier>
+    <ColorAdditive>0, 0, 0, 0</ColorAdditive>
+    <WaveMap0FileName>Xi/3D/waves</WaveMap0FileName>
+    <WaveMap1FileName>Xi/3D/waves</WaveMap1FileName>
+    <WaveLength>0.05</WaveLength>
+    <WaveHeight>0.05</WaveHeight>
+  </Xi.Water.Default>
+  
+  <!--Default actor groups.-->
+  
+  <Xi.ActorGroup.Default>
+    <Inherits>Xi.Simulatable.Default</Inherits>
+  </Xi.ActorGroup.Default>
+  
+  <!--Default screens.-->
+  
+  <Xi.Screen.Default>
+    <Inherits>Xi.Simulatable.Default</Inherits>
+  </Xi.Screen.Default>
+  
+  <!--Default applications.-->
+  
+  <Xi.Application.Default>
+    <Inherits>Xi.Simulatable.Default</Inherits>
+  </Xi.Application.Default>
+</Root>

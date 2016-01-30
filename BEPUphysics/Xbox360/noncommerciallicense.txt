@@ -1,0 +1,31 @@
+BEPUphysics Noncommercial License Agreement
+Copyright (c) 2010 Bepu Entertainment LLC.
+
+Definitions:
+
+-"Product" refers to the BEPUphysics library and its contents.
+
+-"Licensor" is defined as Bepu Entertainment LLC.
+
+-"Licensee" is defined as the party that downloads the Product from the Licensor website, www.bepu-games.com (also at www.bepugames.com, www.bepuentertainment.com). 
+
+Terms of Agreement:
+
+-Licensor hereby grants to Licensee a limited, revocable, worldwide, non-exclusive, non-transferable, non-sublicensable license to use the Product in accordance with the terms and conditions of this Agreement. Licensee shall not use the Product for any commercial purposes except for evaluation of the Product.
+
+-Licensee may not reverse engineer the Product or use any method to obtain the source code of the Product except through explicit and intentional source code releases by the Licensor.
+
+-This Agreement shall commence upon Licensee's first use of the Product and continue until Licensee discontinues use of the Product or Licensor terminates this Agreement in its absolute discretion.  In addition, this Agreement shall automatically terminate upon Licensee's breach of any term or condition of this Agreement.  Upon termination of this Agreement, Licensee will delete the Product in Licensee's possession immediately.
+
+-The Product is provided 'as-is', without any express or implied warranties.  Licensor disclaims all warranties of merchantability, fitness for a particular purpose and noninfringment.   Licensor does not guarantee that the Product or the media containing the Product will be error-free or that defects will be corrected.
+
+-IN NO EVENT WILL LICENSOR, NOR THE AUTHORS OF THE PRODUCT, BE LIABLE FOR ANY LOSS, INJURY OR DAMAGE ARISING FROM THE USE OF THE PRODUCT OR THE ACTS OF OMISSIONS OF LICENSOR OR THE AUTHORS.  IN NO EVENT SHALL LICENSOR BE LIABLE TO LICENSEE FOR ANY INDIRECT, INCIDENTAL, CONSEQUENTIAL OR SPECIAL DAMAGES (INCLUDING LOST BUSINESS OR LOST PROFITS), EVEN IF LICENSOR IS ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+-Licensor will retain all right, title and interest in and to the Product and all copies thereof.  Licensee will not directly or indirectly obtain or attempt to obtain at any time, any right, title or interest by registration or otherwise, in or to the trademarks, service marks, copyrights, trade names, symbols, logos or designations or other intellectual property rights owned or used by Licensor.  All technical information provided by Licensor to Licensee shall remain the sole property of Licensor.  Licensee may not remove or obscure any identifying notices that Licensor has placed on the Product.
+
+Contact:
+contact@bepu-games.com
+
+
+
+

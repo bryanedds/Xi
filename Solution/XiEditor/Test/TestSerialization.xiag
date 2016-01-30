@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <Serializable>
+    <Type>Xi.ActorGroup</Type>
+    <OverlayNameSerialized>Xi.ActorGroup</OverlayNameSerialized>
+    <Serializable>
+      <Type>Xi.Skybox</Type>
+      <OverlayNameSerialized>Xi.Skybox</OverlayNameSerialized>
+    </Serializable>
+    <Serializable>
+      <Type>Xi.BasicModel</Type>
+      <OverlayNameSerialized>Xi.BasicModel</OverlayNameSerialized>
+    </Serializable>
+    <Serializable>
+      <Type>Xi.AmbientLight3D</Type>
+      <Color>255, 128, 255, 255</Color>
+      <OverlayNameSerialized>Xi.AmbientLight3D</OverlayNameSerialized>
+    </Serializable>
+  </Serializable>
+</Root>

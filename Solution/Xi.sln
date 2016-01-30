@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual C# Express 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xi", "Xi\Xi.csproj", "{7D0CEB3E-BE2F-4BBB-8CCD-343733FB6423}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XiEditor", "XiEditor\XiEditor.csproj", "{8AAD82B2-50E1-483F-B125-7DC9D37834B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xbox 360 Copy of Xi", "Xi\Xbox 360 Copy of Xi.csproj", "{1A3B9432-76DF-45F2-BA55-78D6B668868E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Debug|Xbox 360 = Debug|Xbox 360
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+		Release|Xbox 360 = Release|Xbox 360
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7D0CEB3E-BE2F-4BBB-8CCD-343733FB6423}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{7D0CEB3E-BE2F-4BBB-8CCD-343733FB6423}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{7D0CEB3E-BE2F-4BBB-8CCD-343733FB6423}.Debug|x86.ActiveCfg = Debug|x86
+		{7D0CEB3E-BE2F-4BBB-8CCD-343733FB6423}.Debug|x86.Build.0 = Debug|x86
+		{7D0CEB3E-BE2F-4BBB-8CCD-343733FB6423}.Debug|Xbox 360.ActiveCfg = Debug|x86
+		{7D0CEB3E-BE2F-4BBB-8CCD-343733FB6423}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{7D0CEB3E-BE2F-4BBB-8CCD-343733FB6423}.Release|Mixed Platforms.Build.0 = Release|x86
+		{7D0CEB3E-BE2F-4BBB-8CCD-343733FB6423}.Release|x86.ActiveCfg = Release|x86
+		{7D0CEB3E-BE2F-4BBB-8CCD-343733FB6423}.Release|x86.Build.0 = Release|x86
+		{7D0CEB3E-BE2F-4BBB-8CCD-343733FB6423}.Release|Xbox 360.ActiveCfg = Release|x86
+		{8AAD82B2-50E1-483F-B125-7DC9D37834B4}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{8AAD82B2-50E1-483F-B125-7DC9D37834B4}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{8AAD82B2-50E1-483F-B125-7DC9D37834B4}.Debug|x86.ActiveCfg = Debug|x86
+		{8AAD82B2-50E1-483F-B125-7DC9D37834B4}.Debug|x86.Build.0 = Debug|x86
+		{8AAD82B2-50E1-483F-B125-7DC9D37834B4}.Debug|Xbox 360.ActiveCfg = Debug|x86
+		{8AAD82B2-50E1-483F-B125-7DC9D37834B4}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{8AAD82B2-50E1-483F-B125-7DC9D37834B4}.Release|Mixed Platforms.Build.0 = Release|x86
+		{8AAD82B2-50E1-483F-B125-7DC9D37834B4}.Release|x86.ActiveCfg = Release|x86
+		{8AAD82B2-50E1-483F-B125-7DC9D37834B4}.Release|x86.Build.0 = Release|x86
+		{8AAD82B2-50E1-483F-B125-7DC9D37834B4}.Release|Xbox 360.ActiveCfg = Release|x86
+		{1A3B9432-76DF-45F2-BA55-78D6B668868E}.Debug|Mixed Platforms.ActiveCfg = Debug|Xbox 360
+		{1A3B9432-76DF-45F2-BA55-78D6B668868E}.Debug|Mixed Platforms.Build.0 = Debug|Xbox 360
+		{1A3B9432-76DF-45F2-BA55-78D6B668868E}.Debug|x86.ActiveCfg = Debug|Xbox 360
+		{1A3B9432-76DF-45F2-BA55-78D6B668868E}.Debug|Xbox 360.ActiveCfg = Debug|Xbox 360
+		{1A3B9432-76DF-45F2-BA55-78D6B668868E}.Debug|Xbox 360.Build.0 = Debug|Xbox 360
+		{1A3B9432-76DF-45F2-BA55-78D6B668868E}.Release|Mixed Platforms.ActiveCfg = Release|Xbox 360
+		{1A3B9432-76DF-45F2-BA55-78D6B668868E}.Release|Mixed Platforms.Build.0 = Release|Xbox 360
+		{1A3B9432-76DF-45F2-BA55-78D6B668868E}.Release|x86.ActiveCfg = Release|Xbox 360
+		{1A3B9432-76DF-45F2-BA55-78D6B668868E}.Release|Xbox 360.ActiveCfg = Release|Xbox 360
+		{1A3B9432-76DF-45F2-BA55-78D6B668868E}.Release|Xbox 360.Build.0 = Release|Xbox 360
+		{CC17F92D-81A7-44F8-BEFE-DA7A93ECD28A}.Debug|Mixed Platforms.ActiveCfg = Debug|Xbox 360
+		{CC17F92D-81A7-44F8-BEFE-DA7A93ECD28A}.Debug|x86.ActiveCfg = Debug|x86
+		{CC17F92D-81A7-44F8-BEFE-DA7A93ECD28A}.Debug|Xbox 360.ActiveCfg = Debug|Xbox 360
+		{CC17F92D-81A7-44F8-BEFE-DA7A93ECD28A}.Release|Mixed Platforms.ActiveCfg = Release|Xbox 360
+		{CC17F92D-81A7-44F8-BEFE-DA7A93ECD28A}.Release|x86.ActiveCfg = Release|x86
+		{CC17F92D-81A7-44F8-BEFE-DA7A93ECD28A}.Release|Xbox 360.ActiveCfg = Release|Xbox 360
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NDepend) = preSolution
+		Project = ".\Xi.ndproj"
+	EndGlobalSection
+EndGlobal

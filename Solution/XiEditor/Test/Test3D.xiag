@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <Serializable>
+    <Type>Xi.ActorGroup</Type>
+    <OverlayNameSerialized>Xi.ActorGroup</OverlayNameSerialized>
+    <Serializable>
+      <Type>Xi.AmbientLight3D</Type>
+      <OverlayNameSerialized>Xi.AmbientLight3D</OverlayNameSerialized>
+    </Serializable>
+    <Serializable>
+      <Type>Xi.BasicModel</Type>
+      <BodyShape>StaticMesh</BodyShape>
+      <ModelFileName>Xi/3D/GroundQuad</ModelFileName>
+      <Density>0.001287673</Density>
+      <OverlayNameSerialized>Xi.BasicModel</OverlayNameSerialized>
+    </Serializable>
+    <Serializable>
+      <Type>Xi.Skybox</Type>
+      <OverlayNameSerialized>Xi.Skybox</OverlayNameSerialized>
+    </Serializable>
+    <Serializable>
+      <Type>Xi.BasicModel</Type>
+      <Position>-12.01856, 5.03444, 0.09365233</Position>
+      <OrientationQuaternion>4.116902E-05, -0.009354426, -0.0003882085, 0.9999562</OrientationQuaternion>
+      <AngularMomentum>-2.283349E-05, -5.423598E-05, 3.116765E-05</AngularMomentum>
+      <AngularVelocity>-3.612551E-10, -1.215543E-09, 3.426555E-10</AngularVelocity>
+      <LinearMomentum>-3.877553E-06, 9.499605E-07, -3.17339E-06</LinearMomentum>
+      <LinearVelocity>-3.786673E-09, 9.276958E-10, -3.099014E-09</LinearVelocity>
+      <AffectedByGravity>True</AffectedByGravity>
+      <OverlayNameSerialized>Xi.BasicModel</OverlayNameSerialized>
+    </Serializable>
+    <Serializable>
+      <Type>Xi.BasicModel</Type>
+      <Position>1.79546, 5.038962, 0.2078536</Position>
+      <OrientationQuaternion>-6.543121E-05, -0.0004144912, -0.0001085136, 0.9999999</OrientationQuaternion>
+      <AngularMomentum>-0.0001322267, -4.588384E-06, -0.0001789367</AngularMomentum>
+      <AngularVelocity>-5.560788E-10, 3.377732E-11, 3.397964E-10</AngularVelocity>
+      <LinearMomentum>-1.979846E-06, -4.658887E-09, -3.167012E-06</LinearMomentum>
+      <LinearVelocity>-1.933444E-09, -4.549694E-12, -3.092786E-09</LinearVelocity>
+      <AffectedByGravity>True</AffectedByGravity>
+      <OverlayNameSerialized>Xi.BasicModel</OverlayNameSerialized>
+    </Serializable>
+    <Serializable>
+      <Type>Xi.BasicModel</Type>
+      <Position>17.25258, 5.032615, -0.2279945</Position>
+      <OrientationQuaternion>-0.0001289471, 0.0006883452, -0.0003450695, 0.9999997</OrientationQuaternion>
+      <AngularMomentum>-3.607124E-05, -4.337987E-05, -1.467101E-05</AngularMomentum>
+      <AngularVelocity>-3.797162E-10, -9.316551E-10, -2.989195E-10</AngularVelocity>
+      <LinearMomentum>1.529452E-06, -4.759598E-07, -1.579643E-06</LinearMomentum>
+      <LinearVelocity>1.493606E-09, -4.648045E-10, -1.54262E-09</LinearVelocity>
+      <AffectedByGravity>True</AffectedByGravity>
+      <OverlayNameSerialized>Xi.BasicModel</OverlayNameSerialized>
+    </Serializable>
+    <Serializable>
+      <Type>Xi.BasicModel</Type>
+      <Position>10.01564, 15.11529, -0.01282146</Position>
+      <OrientationQuaternion>9.177696E-05, -0.02060056, 2.748141E-05, 0.9997878</OrientationQuaternion>
+      <AngularMomentum>-9.557527E-06, 4.770797E-06, -2.114179E-05</AngularMomentum>
+      <AngularVelocity>-7.914581E-10, 5.872736E-11, 2.337678E-10</AngularVelocity>
+      <LinearMomentum>-3.205913E-06, -2.634787E-06, -1.162539E-05</LinearMomentum>
+      <LinearVelocity>-3.130775E-09, -2.573034E-09, -1.135292E-08</LinearVelocity>
+      <AffectedByGravity>True</AffectedByGravity>
+      <OverlayNameSerialized>Xi.BasicModel</OverlayNameSerialized>
+    </Serializable>
+    <Serializable>
+      <Type>Xi.BasicModel</Type>
+      <Position>-6.007699, 15.11584, -0.03533036</Position>
+      <OrientationQuaternion>6.174984E-05, 0.0009976234, 0.0002527666, 0.9999995</OrientationQuaternion>
+      <AngularMomentum>5.672623E-05, 1.374307E-05, -2.083684E-05</AngularMomentum>
+      <AngularVelocity>-5.588712E-10, 2.499725E-10, -5.136562E-10</AngularVelocity>
+      <LinearMomentum>-2.363666E-06, -7.453991E-07, -8.156301E-06</LinearMomentum>
+      <LinearVelocity>-2.308268E-09, -7.279288E-10, -7.965138E-09</LinearVelocity>
+      <AffectedByGravity>True</AffectedByGravity>
+      <OverlayNameSerialized>Xi.BasicModel</OverlayNameSerialized>
+    </Serializable>
+    <Serializable>
+      <Type>Xi.BasicModel</Type>
+      <Position>2.004277, 25.19286, 0.004983639</Position>
+      <OrientationQuaternion>0.0002217647, 0.0002823156, -0.0005484947, 0.9999998</OrientationQuaternion>
+      <AngularMomentum>-7.501635E-05, 3.36128E-05, 1.767756E-05</AngularMomentum>
+      <AngularVelocity>-7.437788E-10, 8.162166E-10, 3.556084E-11</AngularVelocity>
+      <LinearMomentum>-3.936999E-06, -3.066382E-06, -1.761317E-05</LinearMomentum>
+      <LinearVelocity>-3.844725E-09, -2.994514E-09, -1.720036E-08</LinearVelocity>
+      <AffectedByGravity>True</AffectedByGravity>
+      <OverlayNameSerialized>Xi.BasicModel</OverlayNameSerialized>
+    </Serializable>
+    <Serializable>
+      <Type>Xi.Terrain</Type>
+      <OverlayNameSerialized>Xi.Terrain</OverlayNameSerialized>
+    </Serializable>
+    <Serializable>
+      <Type>Xi.Water</Type>
+      <Scale>1024, 1024</Scale>
+      <OverlayNameSerialized>Xi.Water</OverlayNameSerialized>
+    </Serializable>
+    <Serializable>
+      <Type>Xi.DirectionalLight3D</Type>
+      <ShadowEnabled>False</ShadowEnabled>
+      <OverlayNameSerialized>Xi.DirectionalLight3D</OverlayNameSerialized>
+    </Serializable>
+  </Serializable>
+</Root>

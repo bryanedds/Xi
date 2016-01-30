@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <Serializable>
+    <Type>Xi.ActorGroup</Type>
+    <OverlayNameSerialized>Xi.ActorGroup</OverlayNameSerialized>
+    <Serializable>
+      <Type>Xi.SpriteActor</Type>
+      <BodyType>Static</BodyType>
+      <Position>52, -56, 0</Position>
+      <Inertia>2796203</Inertia>
+      <OverlayNameSerialized>Xi.SpriteActor</OverlayNameSerialized>
+    </Serializable>
+    <Serializable>
+      <Type>Xi.SpriteActor</Type>
+      <Position>-8.601916, 84.11575, 0</Position>
+      <Rotation>4.710737</Rotation>
+      <LinearVelocity>-3.821626E-08, 1.838316E-10</LinearVelocity>
+      <AngularVelocity>2.541985E-11</AngularVelocity>
+      <Inertia>2796203</Inertia>
+      <AffectedByGravity>True</AffectedByGravity>
+      <OverlayNameSerialized>Xi.SpriteActor</OverlayNameSerialized>
+    </Serializable>
+    <Serializable>
+      <Type>Xi.SpriteActor</Type>
+      <Position>-116.4722, 1061.087, 0</Position>
+      <Rotation>-4.751003</Rotation>
+      <LinearVelocity>-0.3152958, 119.9993</LinearVelocity>
+      <AngularVelocity>-0.005554847</AngularVelocity>
+      <Inertia>2796203</Inertia>
+      <AffectedByGravity>True</AffectedByGravity>
+      <OverlayNameSerialized>Xi.SpriteActor</OverlayNameSerialized>
+    </Serializable>
+    <Serializable>
+      <Type>Xi.SpriteActor</Type>
+      <Position>-44.39523, -70.64999, 0</Position>
+      <Rotation>-0.6816165</Rotation>
+      <LinearVelocity>3.343906E-10, -1.125736E-09</LinearVelocity>
+      <AngularVelocity>-3.293671E-11</AngularVelocity>
+      <Inertia>2796203</Inertia>
+      <AffectedByGravity>True</AffectedByGravity>
+      <OverlayNameSerialized>Xi.SpriteActor</OverlayNameSerialized>
+    </Serializable>
+    <Serializable>
+      <Type>Xi.SpriteActor</Type>
+      <Position>44.64711, 45.64034, 0</Position>
+      <Rotation>4.485127</Rotation>
+      <LinearVelocity>7.455254E-07, 3.403847E-06</LinearVelocity>
+      <AngularVelocity>1.172102E-07</AngularVelocity>
+      <Inertia>2796203</Inertia>
+      <AffectedByGravity>True</AffectedByGravity>
+      <OverlayNameSerialized>Xi.SpriteActor</OverlayNameSerialized>
+    </Serializable>
+    <Serializable>
+      <Type>Xi.SpriteActor</Type>
+      <Position>139.7275, 263.5414, 0</Position>
+      <Rotation>-4.873322</Rotation>
+      <LinearVelocity>5.711294, 93.41785</LinearVelocity>
+      <AngularVelocity>4.97805E-09</AngularVelocity>
+      <Inertia>2796203</Inertia>
+      <AffectedByGravity>True</AffectedByGravity>
+      <OverlayNameSerialized>Xi.SpriteActor</OverlayNameSerialized>
+    </Serializable>
+    <Serializable>
+      <Type>Xi.SpriteActor</Type>
+      <Position>-8.278748, 1212.896, 0</Position>
+      <Rotation>1.56811</Rotation>
+      <LinearVelocity>-1.535939E-07, 119.9997</LinearVelocity>
+      <AngularVelocity>-1.125278E-08</AngularVelocity>
+      <Inertia>2796203</Inertia>
+      <AffectedByGravity>True</AffectedByGravity>
+      <OverlayNameSerialized>Xi.SpriteActor</OverlayNameSerialized>
+    </Serializable>
+    <Serializable>
+      <Type>Xi.SpriteActor</Type>
+      <BodyType>Static</BodyType>
+      <Position>-96, -12, 0</Position>
+      <Inertia>2796203</Inertia>
+      <OverlayNameSerialized>Xi.SpriteActor</OverlayNameSerialized>
+    </Serializable>
+    <Serializable>
+      <Type>Xi.SpriteActor</Type>
+      <BodyType>Static</BodyType>
+      <Position>36, -32, 0</Position>
+      <Inertia>2796203</Inertia>
+      <OverlayNameSerialized>Xi.SpriteActor</OverlayNameSerialized>
+    </Serializable>
+    <Serializable>
+      <Type>Xi.SpriteActor</Type>
+      <BodyType>Static</BodyType>
+      <Position>56, 48, 0</Position>
+      <Inertia>2796203</Inertia>
+      <OverlayNameSerialized>Xi.SpriteActor</OverlayNameSerialized>
+    </Serializable>
+    <Serializable>
+      <Type>Xi.SpriteActor</Type>
+      <BodyType>Static</BodyType>
+      <Position>144, -4, 0</Position>
+      <Rotation>0.7853982</Rotation>
+      <Inertia>2796203</Inertia>
+      <OverlayNameSerialized>Xi.SpriteActor</OverlayNameSerialized>
+    </Serializable>
+    <Serializable>
+      <Type>Xi.SpriteActor</Type>
+      <BodyType>Static</BodyType>
+      <Position>-20, 4, 0</Position>
+      <Rotation>0.5235988</Rotation>
+      <Inertia>2796203</Inertia>
+      <OverlayNameSerialized>Xi.SpriteActor</OverlayNameSerialized>
+    </Serializable>
+    <Serializable>
+      <Type>Xi.SpriteActor</Type>
+      <BodyType>Static</BodyType>
+      <Position>-12, 148, 0</Position>
+      <Inertia>2796203</Inertia>
+      <OverlayNameSerialized>Xi.SpriteActor</OverlayNameSerialized>
+    </Serializable>
+    <Serializable>
+      <Type>Xi.SpriteActor</Type>
+      <BodyType>Static</BodyType>
+      <Position>55, 115, 0</Position>
+      <Inertia>2796203</Inertia>
+      <OverlayNameSerialized>Xi.SpriteActor</OverlayNameSerialized>
+    </Serializable>
+    <Serializable>
+      <Type>Xi.SpriteActor</Type>
+      <BodyType>Static</BodyType>
+      <Position>-44, 72, 0</Position>
+      <Inertia>2796203</Inertia>
+      <OverlayNameSerialized>Xi.SpriteActor</OverlayNameSerialized>
+    </Serializable>
+  </Serializable>
+</Root>

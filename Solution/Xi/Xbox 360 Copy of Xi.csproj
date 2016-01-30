@@ -1,0 +1,321 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectGuid>{1A3B9432-76DF-45F2-BA55-78D6B668868E}</ProjectGuid>
+    <ProjectTypeGuids>{6D335F3A-9D43-41b4-9D22-F6F17C4BE596};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">Xbox 360</Platform>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Xi</RootNamespace>
+    <AssemblyName>Xi</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <XnaFrameworkVersion>v3.1</XnaFrameworkVersion>
+    <XnaPlatform>Xbox 360</XnaPlatform>
+    <XnaCrossPlatformGroupID>e6c087b9-332d-415a-b6d1-cf59efc22c24</XnaCrossPlatformGroupID>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <Thumbnail>
+    </Thumbnail>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <StartupObject>
+    </StartupObject>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Xbox 360' ">
+    <OutputPath>bin\Xbox 360\Debug</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TRACE;XBOX;XBOX360</DefineConstants>
+    <XnaCompressContent>true</XnaCompressContent>
+    <DocumentationFile>bin\Xbox 360\Debug\Xi.XML</DocumentationFile>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <NoWarn>1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Xbox 360' ">
+    <OutputPath>bin\Xbox 360\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE;XBOX;XBOX360</DefineConstants>
+    <XnaCompressContent>true</XnaCompressContent>
+    <DocumentationFile>bin\Xbox 360\Release\Xi.XML</DocumentationFile>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <NoWarn>1591</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Actors\2D\Actor2D.cs" />
+    <Compile Include="Actors\2D\Sprite.cs" />
+    <Compile Include="Actors\3D\Actor3D.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Actors\3D\AmbientLight.cs" />
+    <Compile Include="Actors\3D\AnimatedModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Actors\3D\BaseModel.cs" />
+    <Compile Include="Actors\3D\BasicModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Actors\3D\DirectionalLight.cs" />
+    <Compile Include="Actors\3D\DirectionalShadow.cs" />
+    <Compile Include="Actors\3D\IDirectionalShadow.cs" />
+    <Compile Include="Actors\3D\Light.cs" />
+    <Compile Include="Actors\3D\NormalMappedModel.cs" />
+    <Compile Include="Actors\3D\NullDirectionalShadow.cs" />
+    <Compile Include="Actors\3D\PointLight.cs" />
+    <Compile Include="Actors\3D\SingleSurfaceActor.cs" />
+    <Compile Include="Actors\3D\Skybox.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Actors\3D\Terrain.cs" />
+    <Compile Include="Actors\3D\Water.cs" />
+    <Compile Include="Actors\UI\ActorUI.cs" />
+    <Compile Include="Actors\UI\Button.cs" />
+    <Compile Include="Actors\UI\HelperUI.cs" />
+    <Compile Include="Actors\UI\Label.cs" />
+    <Compile Include="Effects\BaseEffect.cs" />
+    <Compile Include="Effects\BasicEffectExtension.cs" />
+    <Compile Include="Effects\EffectExtension.cs" />
+    <Compile Include="Effects\EffectParameterExtension.cs" />
+    <Compile Include="Effects\FogReceiverEffect.cs" />
+    <Compile Include="Effects\LightReceiverEffect.cs" />
+    <Compile Include="Effects\NormalMappedEffect.cs" />
+    <Compile Include="Effects\ShadowReceiverEffect.cs" />
+    <Compile Include="Facets\3D\CameraTracker.cs" />
+    <Compile Include="Facets\3D\TimedSpawner.cs" />
+    <Compile Include="Fakes\BrowsableAttribute.cs" />
+    <Compile Include="Fakes\ContentFileNameEditor.cs" />
+    <Compile Include="Fakes\EditorAttribute.cs" />
+    <Compile Include="Fakes\FileNameEditor.cs" />
+    <Compile Include="Fakes\UITypeEditor.cs" />
+    <Compile Include="Geometry\BoxGeometry.cs" />
+    <Compile Include="Geometry\FaceMode.cs" />
+    <Compile Include="Geometry\Geometry.cs" />
+    <Compile Include="Geometry\GridGeometry.cs" />
+    <Compile Include="Geometry\IVertices.cs" />
+    <Compile Include="Geometry\ManagedVertexDeclaration.cs" />
+    <Compile Include="Geometry\PrimitiveTypeHelper.cs" />
+    <Compile Include="Geometry\QuadGeometry.cs" />
+    <Compile Include="Geometry\ScreenQuadGeometry.cs" />
+    <Compile Include="Geometry\SkyboxGeometry.cs" />
+    <Compile Include="Geometry\TerrainPatchGeometry.cs" />
+    <Compile Include="Geometry\VertexPositionNormalTextureBinormalTangent.cs" />
+    <Compile Include="Geometry\Vertices.cs" />
+    <Compile Include="Geometry\VerticesPositionNormalTexture.cs" />
+    <Compile Include="Geometry\VerticesPositionNormalTextureBinormalTangent.cs" />
+    <Compile Include="Infrastructure\Navigator.cs" />
+    <Compile Include="Infrastructure\QueriableSimulatables.cs" />
+    <Compile Include="Infrastructure\Recyclable.cs" />
+    <Compile Include="Infrastructure\Simulatable.cs" />
+    <Compile Include="Infrastructure\SimulatablePC.cs" />
+    <Compile Include="Input\FocusDescriptor.cs" />
+    <Compile Include="Input\InputEnums.cs" />
+    <Compile Include="Input\InputForwarder.cs" />
+    <Compile Include="Input\InputHelper.cs" />
+    <Compile Include="Input\InputRouter.cs" />
+    <Compile Include="Input\RepeatRate.cs" />
+    <Compile Include="Math\BoundingBoxHelper.cs" />
+    <Compile Include="Math\HeightMap.cs" />
+    <Compile Include="Math\PlaneHelper.cs" />
+    <Compile Include="Math\BoundingBoxBuilder.cs" />
+    <Compile Include="Math\Triangle.cs" />
+    <Compile Include="Math\XiMathHelper.cs" />
+    <Compile Include="Message\Argument.cs" />
+    <Compile Include="Message\ArgumentList.cs" />
+    <Compile Include="Message\Message.cs" />
+    <Compile Include="Physics\BodyShape.cs" />
+    <Compile Include="Physics\BoxModelPhysics.cs" />
+    <Compile Include="Physics\IModelPhysics.cs" />
+    <Compile Include="Physics\PhysicsBoxDrawer.cs" />
+    <Compile Include="Physics\PhysicsBrowseAttribute.cs" />
+    <Compile Include="Physics\SphereModelPhysics.cs" />
+    <Compile Include="Physics\StaticMeshModelPhysics.cs" />
+    <Compile Include="RenderTarget\IManagedRenderTarget.cs" />
+    <Compile Include="RenderTarget\ManagedBackBuffer.cs" />
+    <Compile Include="RenderTarget\ManagedDepthStencilBuffer.cs" />
+    <Compile Include="RenderTarget\ManagedRenderTarget2D.cs" />
+    <Compile Include="Simulation\Application.cs" />
+    <Compile Include="Simulation\Facet.cs" />
+    <Compile Include="Simulation\FacetT.cs" />
+    <Compile Include="Simulation\Screen.cs" />
+    <Compile Include="Infrastructure\Focusable.cs" />
+    <Compile Include="Subsystems\Camera.cs" />
+    <Compile Include="Subsystems\FocusManager.cs" />
+    <Compile Include="Subsystems\Fog.cs" />
+    <Compile Include="Subsystems\FovCamera.cs" />
+    <Compile Include="Subsystems\InputCache.cs" />
+    <Compile Include="Subsystems\OrthoCamera.cs" />
+    <Compile Include="Subsystems\Overlayer.cs" />
+    <Compile Include="Subsystems\Recycler.cs" />
+    <Compile Include="Subsystems\ResolutionManager.cs" />
+    <Compile Include="Subsystems\Scene.cs" />
+    <Compile Include="Subsystems\XmlDocumentCache.cs" />
+    <Compile Include="Surfaces\AnimatedModelSurface.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Surfaces\BaseModelSurface.cs" />
+    <Compile Include="Surfaces\BasicModelSurface.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Surfaces\LightReceiverSurface.cs" />
+    <Compile Include="Surfaces\NormalMappedSurface.cs" />
+    <Compile Include="Surfaces\ShadowReceiverSurface.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Surfaces\SkyboxSurface.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Surfaces\Surface.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Surfaces\SurfaceT.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Surfaces\SurfaceDrawer.cs" />
+    <Compile Include="Surfaces\TerrainSurface.cs" />
+    <Compile Include="Surfaces\WaterSurface.cs" />
+    <Compile Include="Utility\ArrayHelper.cs" />
+    <Compile Include="Utility\Constants.cs" />
+    <Compile Include="Infrastructure\Disposable.cs" />
+    <Compile Include="Infrastructure\Overlayable.cs" />
+    <Compile Include="Infrastructure\Serializable.cs" />
+    <Compile Include="Math\EularAxis.cs" />
+    <Compile Include="Math\EularOrientation.cs" />
+    <Compile Include="Math\Segment.cs" />
+    <Compile Include="Physics\AmorphousEntity.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Simulation\Actor.cs" />
+    <Compile Include="Simulation\ActorGroup.cs" />
+    <Compile Include="Utility\CollectionHelper.cs" />
+    <Compile Include="Utility\GraphicsDeviceHelper.cs" />
+    <Compile Include="Utility\ModelHelper.cs" />
+    <Compile Include="Utility\Persistence.cs" />
+    <Compile Include="Utility\PropertyValueStringPair.cs" />
+    <Compile Include="Utility\ReflectionHelper.cs" />
+    <Compile Include="Utility\SpriteHelper.cs" />
+    <Compile Include="Utility\ValueTypeHelper.cs" />
+    <Compile Include="Utility\XiHelper.cs" />
+    <Compile Include="XiGame.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <NestedContentProject Include="Content\Content.contentproj">
+      <Project>cc17f92d-81a7-44f8-befe-da7a93ecd28a</Project>
+      <Visible>False</Visible>
+    </NestedContentProject>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Xna.Framework.3.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft XNA Framework Redistributable 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Documents\Overlay.xiol">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="BEPUphysics, Version=0.13.0.0, Culture=neutral, PublicKeyToken=2f88f332f0ec8bec, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\BEPUphysics\Xbox360\BEPUphysics.dll</HintPath>
+    </Reference>
+    <Reference Include="DebugViewXNA, Version=3.0.3927.24000, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\FarseerPhysics\Xbox360\DebugViewXNA.dll</HintPath>
+    </Reference>
+    <Reference Include="Farseer Physics 3.0 XNA, Version=3.0.3927.23997, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\FarseerPhysics\Xbox360\Farseer Physics 3.0 XNA.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Game">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="mscorlib">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>False</Private>
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>False</Private>
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="XNAnimation, Version=0.7.0.0, Culture=neutral, PublicKeyToken=6f186bb78aa9bb54, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\XNAnimation\Xbox 360\XNAnimation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\Microsoft.Xna.GameStudio.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
