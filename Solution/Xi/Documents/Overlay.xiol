@@ -94,7 +94,7 @@
     <Inertia>682.6667</Inertia>
     <LinearDamping>0</LinearDamping>
     <Restitution>0</Restitution>
-    <AffectedByGravity>False</AffectedByGravity>
+    <AffectedByGravity>True</AffectedByGravity>
     <CCDEnabled>False</CCDEnabled>
     <FixedRotation>False</FixedRotation>
     <PhysicsEnabled>True</PhysicsEnabled>
@@ -128,7 +128,7 @@
     <LinearDamping>0</LinearDamping>
     <Mass>1024</Mass>
     <StaticFriction>0.75</StaticFriction>
-    <AffectedByGravity>False</AffectedByGravity>
+    <AffectedByGravity>True</AffectedByGravity>
     <PhysicsEnabled>True</PhysicsEnabled>
   </Xi.Actor3D.Default>
   

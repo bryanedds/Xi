@@ -508,7 +508,7 @@ namespace Xi
         private void SetUpEntity()
         {
             _entity = new AmorphousEntity();
-            _entity.IsAffectedByGravity = false;
+            _entity.IsAffectedByGravity = true;
             _entity.Mass = 1024;
             _entity.Tag = this;
         }

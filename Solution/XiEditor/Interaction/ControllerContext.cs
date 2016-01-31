@@ -66,6 +66,11 @@ namespace XiEditor
             PasteHook(document, canvasPosition);
         }
 
+        public void EndDragging()
+        {
+            EndDraggingHook();
+        }
+
         public void SelectSameType()
         {
             SelectSameTypeHook();
@@ -124,6 +129,8 @@ namespace XiEditor
         protected virtual XmlDocument CopyHook() { return null; }
 
         protected virtual void PasteHook(XmlDocument document) { }
+
+        protected virtual void EndDraggingHook() { }
 
         protected virtual void PasteHook(XmlDocument document, Vector2 canvasPosition) { }
 

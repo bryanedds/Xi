@@ -15,6 +15,11 @@ namespace XiEditor
 
         public bool IsDragging { get { return draggedActor != null; } }
 
+        public void EndDragging()
+        {
+            draggedActor = null;
+        }
+
         protected EditorController Controller { get { return controller; } }
 
         protected A DraggedActor { get { return draggedActor; } }

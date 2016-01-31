@@ -416,6 +416,7 @@ namespace XiEditor
             AddContext(actorUIContext = new ActorUIContext(game, this));
             AddContext(facetContext = new FacetContext(game, this));
             AddContext(new CameraContext(game, this));
+            game.SimulationSelectionChanged += () => CurrentContext.EndDragging();
         }
 
         private void TearDownContexts()

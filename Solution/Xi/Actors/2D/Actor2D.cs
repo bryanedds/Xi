@@ -426,7 +426,7 @@ namespace Xi
         {
             _fixture = FixtureFactory.CreateRectangle(Game.World, Size.X, Size.Y, 1);
             _fixture.Body.BodyType = BodyType.Dynamic;
-            _fixture.Body.IgnoreGravity = true;
+            _fixture.Body.IgnoreGravity = false;
         }
 
         private void TearDownFixture()

@@ -113,6 +113,11 @@ namespace XiEditor
             actor.SelectedExclusively = true;
         }
 
+        protected sealed override void EndDraggingHook()
+        {
+            dragger.EndDragging();
+        }
+
         protected sealed override IEnumerable<Simulatable> GetItemsHook()
         {
             return ActorGroup.SimulatableChildren.Where(x => x is A);
