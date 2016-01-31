@@ -25,7 +25,7 @@ namespace Xi
             _quadScale = new Vector3(8, 64, 8);
             _gridDims = new Point(8, 8);
             _smoothingFactor = 1;
-            _textureRepetition = new Vector2(8, 8);
+            _textureRepetition = new Vector2(64, 64);
             HeightMapFileName = "Xi/3D/heightMap";
         }
 

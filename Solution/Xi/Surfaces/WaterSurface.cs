@@ -431,14 +431,14 @@ namespace Xi
         /// <summary>May be null.</summary>
         private readonly ManagedRenderTarget2D reflectionMapTarget;
         private readonly Geometry geometry;
-        private Vector2 waveMap0Velocity = new Vector2(0.1f, 0);
+        private Vector2 waveMap0Velocity = new Vector2(0.07f, 0);
         private Vector2 waveMap1Velocity = new Vector2(0, 0.1f);
-        private Vector2 scale = new Vector2(1024);
+        private Vector2 scale = new Vector2(4096);
         private Matrix reflectionView;
-        private Color colorMultiplier = Color.DarkBlue;
-        private Color colorAdditive;
-        private float waveLength = 0.05f;
-        private float waveHeight = 0.05f;
+        private Color colorAdditive = new Color(100, 100, 100, 0);
+        private Color colorMultiplier = new Color(0, 0, 128, 160);
+        private float waveLength = 0.0125f;
+        private float waveHeight = 0.0125f;
         private Texture2D _waveMap0;
         private Texture2D _waveMap1;
         private Effect _effect;

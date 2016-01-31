@@ -34,6 +34,11 @@ namespace Xi
         public Vector2 Offset { get { return offset; } }
 
         /// <summary>
+        /// The 2D terrain height points
+        /// </summary>
+        public float[,] Points { get { return points; } }
+
+        /// <summary>
         /// The length of the indexer.
         /// </summary>
         public int GetLength(int i) { return points.GetLength(i); }

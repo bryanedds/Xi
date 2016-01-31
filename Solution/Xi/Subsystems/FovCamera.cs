@@ -13,7 +13,7 @@ namespace Xi
         /// </summary>
         /// <param name="graphicsDevice">The graphics device.</param>
         public FovCamera(GraphicsDevice graphicsDevice)
-            : base(graphicsDevice, 1, 1024) { }
+            : base(graphicsDevice, 1, 2048) { }
 
         /// <summary>
         /// The camera's field of view.

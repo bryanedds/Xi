@@ -153,6 +153,7 @@
     <Compile Include="Physics\PhysicsBrowseAttribute.cs" />
     <Compile Include="Physics\SphereModelPhysics.cs" />
     <Compile Include="Physics\StaticMeshModelPhysics.cs" />
+    <Compile Include="Physics\TerrainPhysics.cs" />
     <Compile Include="RenderTarget\IManagedRenderTarget.cs" />
     <Compile Include="RenderTarget\ManagedBackBuffer.cs" />
     <Compile Include="RenderTarget\ManagedDepthStencilBuffer.cs" />

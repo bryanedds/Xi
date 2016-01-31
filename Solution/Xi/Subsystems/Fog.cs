@@ -44,8 +44,8 @@ namespace Xi
         }
         
         private Color color = Color.Gray;
-        private float start = 768;
-        private float end = 1024;
+        private float start = 1536;
+        private float end = 2048;
         private bool enabled = true;
     }
 }

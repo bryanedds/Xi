@@ -198,7 +198,7 @@
   <Xi.Terrain.Default>
     <Inherits>Xi.Actor3D.PhysicsDisabled.Default</Inherits>
     <QuadScale>8, 64, 8</QuadScale>
-    <TextureRepetition>8, 8</TextureRepetition>
+    <TextureRepetition>64, 64</TextureRepetition>
     <GridDims>8, 8</GridDims>
     <HeightMapFileName>Xi/3D/heightMap</HeightMapFileName>
     <DiffuseMap0FileName>Xi/3D/Sand</DiffuseMap0FileName>
@@ -210,15 +210,16 @@
 
   <Xi.Water.Default>
     <Inherits>Xi.Actor3D.PhysicsDisabled.Default</Inherits>
-    <Scale>1024, 1024</Scale>
-    <WaveMap0Velocity>0.1, 0</WaveMap0Velocity>
+    <Position>0, 10, 0</Position>
+    <Scale>4096, 4096</Scale>
+    <WaveMap0Velocity>0.07, 0</WaveMap0Velocity>
     <WaveMap1Velocity>0, 0.1</WaveMap1Velocity>
-    <ColorMultiplier>0, 0, 139, 255</ColorMultiplier>
-    <ColorAdditive>0, 0, 0, 0</ColorAdditive>
+    <ColorAdditive>100, 100, 100, 0</ColorAdditive>
+    <ColorMultiplier>0, 0, 128, 160</ColorMultiplier>
     <WaveMap0FileName>Xi/3D/waves</WaveMap0FileName>
     <WaveMap1FileName>Xi/3D/waves</WaveMap1FileName>
-    <WaveLength>0.05</WaveLength>
-    <WaveHeight>0.05</WaveHeight>
+    <WaveLength>0.0125</WaveLength>
+    <WaveHeight>0.0125</WaveHeight>
   </Xi.Water.Default>
   
   <!--Default actor groups.-->

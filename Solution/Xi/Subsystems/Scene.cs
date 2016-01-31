@@ -174,12 +174,12 @@ namespace Xi
 
         private void PreDrawSurfaces(GameTime gameTime, Camera camera)
         {
-            game.SurfaceDrawer3D.PreDrawSurfaces(gameTime, camera, cachedSurfaces);
+            game.SurfaceDrawer.PreDrawSurfaces(gameTime, camera, cachedSurfaces);
         }
 
         private void DrawSurfaces(GameTime gameTime, Camera camera, string drawMode)
         {
-            game.SurfaceDrawer3D.DrawSurfaces(gameTime, camera, drawMode, cachedSurfaces);
+            game.SurfaceDrawer.DrawSurfaces(gameTime, camera, drawMode, cachedSurfaces);
         }
 
         private void ClearSurfaces()

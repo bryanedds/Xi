@@ -14,7 +14,7 @@ namespace Xi
         /// </summary>
         public Terrain(XiGame game) : base(game, false)
         {
-            surface = new TerrainSurface(game, this);
+            SetUpTerrain();
         }
 
         /// <summary>
@@ -29,7 +29,13 @@ namespace Xi
         public Vector3 QuadScale
         {
             get { return surface.QuadScale; }
-            set { surface.QuadScale = value; }
+            set
+            {
+                XiHelper.ArgumentNullCheck(value);
+                if (surface.QuadScale == value) return; // OPTIMIZATION
+                surface.QuadScale = value;
+                ResetTerrain();
+            }
         }
 
         /// <summary>
@@ -71,7 +77,13 @@ namespace Xi
         public Point GridDims
         {
             get { return surface.GridDims; }
-            set { surface.GridDims = value; }
+            set
+            {
+                XiHelper.ArgumentNullCheck(value);
+                if (surface.GridDims == value) return; // OPTIMIZATION
+                surface.GridDims = value;
+                ResetTerrain();
+            }
         }
 
         /// <summary>
@@ -81,7 +93,13 @@ namespace Xi
         public string HeightMapFileName
         {
             get { return surface.HeightMapFileName; }
-            set { surface.HeightMapFileName = value; }
+            set
+            {
+                XiHelper.ArgumentNullCheck(value);
+                if (surface.HeightMapFileName == value) return; // OPTIMIZATION
+                surface.HeightMapFileName = value;
+                ResetTerrain();
+            }
         }
 
         /// <summary>
@@ -139,10 +157,65 @@ namespace Xi
         /// <inheritdoc />
         protected override void Destroy(bool destroying)
         {
-            if (destroying) surface.Dispose();
+            if (destroying) TearDownTerrain();
             base.Destroy(destroying);
         }
 
-        private readonly TerrainSurface surface;
+        private void ResetTerrain()
+        {
+            TearDownTerrain();
+            SetUpTerrain();
+        }
+
+        private void ResetSurface()
+        {
+            TearDownSurface();
+            SetUpSurface();
+        }
+
+        private void ResetPhysics()
+        {
+            TearDownPhysics();
+            SetUpPhysics();
+        }
+
+        private void SetUpTerrain()
+        {
+            ResetSurface();
+            ResetPhysics();
+        }
+
+        private void SetUpSurface()
+        {
+            surface = new TerrainSurface(Game, this);
+        }
+
+        private void SetUpPhysics()
+        {
+            physics = new TerrainPhysics(Game, this);
+            Entity = physics.Entity;
+            Entity.IsAlwaysActive = Game.Editing;
+        }
+
+        private void TearDownTerrain()
+        {
+            TearDownSurface();
+            TearDownPhysics();
+        }
+
+        private void TearDownSurface()
+        {
+            if (surface != null) surface.Dispose();
+            surface = null;
+        }
+
+        private void TearDownPhysics()
+        {
+            if (physics != null) physics.Dispose();
+            physics = null;
+        }
+
+        private TerrainSurface surface;
+        private TerrainPhysics physics; 
     }
 }

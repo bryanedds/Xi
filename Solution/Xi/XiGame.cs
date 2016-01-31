@@ -52,18 +52,19 @@ namespace Xi
             };
 
             // set up the rendering (part 1)
-            scene3D = new Scene(this);
-            surfaceDrawer3D = new SurfaceDrawer(this);
+            scene = new Scene(this);
+            surfaceDrawer = new SurfaceDrawer(this);
 
             // set up BEPU
             sceneSpace = new Space();
             sceneSpace.SimulationSettings.MotionUpdate.Gravity = new Vector3(0, -20, 0);
-            if (Environment.ProcessorCount > 1)
+            /*if (Environment.ProcessorCount > 1)
             {
                 for (int i = 0; i < Environment.ProcessorCount; i++) sceneSpace.ThreadManager.AddThread();
                 sceneSpace.UseMultithreadedUpdate = true;
             }
-            sceneSpace.SimulationSettings.CollisionResponse.Iterations = 8;
+            sceneSpace.SimulationSettings.CollisionResponse.Iterations = 8;*/
+            sceneSpace.BroadPhase = new BEPUphysics.BroadPhases.PersistentUniformGrid(256);
         }
 
         /// <summary>
@@ -126,12 +127,12 @@ namespace Xi
         /// <summary>
         /// The 3D scene.
         /// </summary>
-        public Scene Scene { get { return scene3D; } }
+        public Scene Scene { get { return scene; } }
 
         /// <summary>
         /// The 3D surface drawer.
         /// </summary>
-        public SurfaceDrawer SurfaceDrawer3D { get { return surfaceDrawer3D; } }
+        public SurfaceDrawer SurfaceDrawer { get { return surfaceDrawer; } }
 
         /// <summary>
         /// The 2D sprite batch.
@@ -494,7 +495,7 @@ namespace Xi
                 if (depthStencilBuffer != null) depthStencilBuffer.Dispose();
                 if (spriteBatchUI != null) spriteBatchUI.Dispose();
                 if (spriteBatch2D != null) spriteBatch2D.Dispose();
-                if (scene3D != null) scene3D.Dispose();
+                if (scene != null) scene.Dispose();
             }
             base.Dispose(disposing);
         }
@@ -542,14 +543,14 @@ namespace Xi
             depthStencilBuffer.Activate();
 
             // pre-draw the 3D scene
-            scene3D.PreDraw(gameTime, Camera);
+            scene.PreDraw(gameTime, Camera);
 
             // activate the and clear the back buffer
             backBuffer.Activate();
             GraphicsDevice.Clear(ClearOptions.DepthBuffer | ClearOptions.Target, Color.Black, 1.0f, 0);
 
             // draw the 3D scene
-            scene3D.Draw(gameTime, Camera, "Normal");
+            scene.Draw(gameTime, Camera, "Normal");
 
             // draw physics boxes
             if (physicsBoxDrawer.Visible) physicsBoxDrawer.Draw(camera.View, camera.Projection);
@@ -649,8 +650,8 @@ namespace Xi
         private readonly GraphicsDeviceManager graphics;
 
         // rendering
-        private readonly Scene scene3D;
-        private readonly SurfaceDrawer surfaceDrawer3D;
+        private readonly Scene scene;
+        private readonly SurfaceDrawer surfaceDrawer;
         private SpriteBatch spriteBatch2D;
         private SpriteBatch spriteBatchUI;
         private ManagedDepthStencilBuffer depthStencilBuffer;

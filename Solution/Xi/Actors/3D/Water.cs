@@ -17,6 +17,7 @@ namespace Xi
         public Water(XiGame game) : base(game, false)
         {
             surface = new WaterSurface(game, this);
+            Position = new Vector3(0, 10, 0); // nice offset from bottom of terrain
         }
 
         /// <summary>
