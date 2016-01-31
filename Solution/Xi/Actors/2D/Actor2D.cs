@@ -16,10 +16,8 @@ namespace Xi
         /// Create an Actor2D.
         /// </summary>
         /// <param name="game">The game.</param>
-        /// <param name="physicsEnabled">Is the actor's physics enabled?</param>
-        public Actor2D(XiGame game, bool physicsEnabled) : base(game)
+        public Actor2D(XiGame game) : base(game)
         {
-            _physicsEnabled = physicsEnabled; // circumvent property to avoid virtual call
             SetUpFixture();
         }
 
@@ -289,20 +287,6 @@ namespace Xi
         }
 
         /// <summary>
-        /// Is the actor's phyiscs enabled?
-        /// </summary>
-        public bool PhysicsEnabled
-        {
-            get { return _physicsEnabled; }
-            set
-            {
-                _physicsEnabled = value;
-                RefreshBodyActive();
-                Game.RaiseSimulationSelectionChanged(); // refresh property grid
-            }
-        }
-
-        /// <summary>
         /// The physics fixture.
         /// </summary>
         [Browsable(false), PhysicsBrowse]
@@ -393,7 +377,6 @@ namespace Xi
         {
             return
                 base.IsHidden(property) ||
-                !PhysicsEnabled &&
                 GetType().GetPropertyFast(property.Name).HasCustomAttributeFast(typeof(PhysicsBrowseAttribute));
         }
 
@@ -405,21 +388,6 @@ namespace Xi
             Fixture.OnSeparation = null;
             Fixture.PostSolve = null;
             FixtureChanged = null;
-            RefreshBodyActive();
-        }
-
-        /// <inheritdoc />
-        protected override void OnAllocated()
-        {
-            base.OnAllocated();
-            RefreshBodyActive();
-        }
-
-        /// <inheritdoc />
-        protected override void OnEnabledChanged()
-        {
-            base.OnEnabledChanged();
-            RefreshBodyActive();
         }
 
         private void SetUpFixture()
@@ -427,6 +395,7 @@ namespace Xi
             _fixture = FixtureFactory.CreateRectangle(Game.World, Size.X, Size.Y, 1);
             _fixture.Body.BodyType = BodyType.Dynamic;
             _fixture.Body.IgnoreGravity = false;
+            _fixture.Body.Active = true;
         }
 
         private void TearDownFixture()
@@ -482,13 +451,7 @@ namespace Xi
             target.PostSolve = source.PostSolve;
         }
 
-        private void RefreshBodyActive()
-        {
-            Body.Active = PhysicsEnabled && Enabled && Allocated;
-        }
-
         private float positionZ;
-        private bool _physicsEnabled = true;
         private Fixture _fixture;
     }
 }

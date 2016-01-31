@@ -15,8 +15,7 @@ namespace Xi
         /// Create a Sprite.
         /// </summary>
         /// <param name="game">The game.</param>
-        public Sprite(XiGame game)
-            : base(game, true)
+        public Sprite(XiGame game) : base(game)
         {
             SetUpFixture();
         }

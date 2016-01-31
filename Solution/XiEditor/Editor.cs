@@ -25,6 +25,7 @@ namespace XiEditor
         protected override void Initialize()
         {
             base.Initialize();
+            PhysicsEnabled = false;
             Editing = true;
             PhysicsBoxDrawerVisible = true;
             SetUpProgramForm();

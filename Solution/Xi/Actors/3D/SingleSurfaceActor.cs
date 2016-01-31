@@ -14,8 +14,7 @@ namespace Xi
         /// Create an SingleSurfaceActor3D.
         /// </summary>
         /// <param name="game">The game.</param>
-        /// <param name="physicsEnabled">Is the actor's physics enabled?</param>
-        public SingleSurfaceActor(XiGame game, bool physicsEnabled) : base(game, physicsEnabled) { }
+        public SingleSurfaceActor(XiGame game) : base(game) { }
 
         /// <summary>
         /// The surface.

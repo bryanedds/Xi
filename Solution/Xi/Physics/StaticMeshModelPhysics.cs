@@ -26,6 +26,7 @@ namespace Xi
             model.GetVerticesAndIndices(out vertices, out indices);
             TriangleMesh triangleMesh = new TriangleMesh(vertices, indices);
             staticTriangleGroup = new StaticTriangleGroup(triangleMesh);
+            game.SceneSpace.Add(staticTriangleGroup);
         }
 
         /// <summary>

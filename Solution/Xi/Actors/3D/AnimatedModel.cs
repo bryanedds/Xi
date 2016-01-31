@@ -15,7 +15,7 @@ namespace Xi
         /// <summary>
         /// Create an AnimatedModel.
         /// </summary>
-        public AnimatedModel(XiGame game) : base(game, false)
+        public AnimatedModel(XiGame game) : base(game)
         {
             SkinnedModelFileName = "Xi/3D/PlayerMarine";
             // populate surface AFTER becoming an otherwise valid object

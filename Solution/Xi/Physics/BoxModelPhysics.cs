@@ -30,6 +30,7 @@ namespace Xi
                 Math.Max(Math.Abs(boundingBox.Max.Y), Math.Abs(boundingBox.Min.Y)) * 2,
                 Math.Max(Math.Abs(boundingBox.Max.Z), Math.Abs(boundingBox.Min.Z)) * 2,
                 mass);
+            game.SceneSpace.Add(body);
             /*
             this alternative method does not work and I don't know why -
             Box box = new Box(
@@ -40,6 +41,7 @@ namespace Xi
                 Mass);
             body = new CompoundBody();
             body.addBody(box);
+            game.SceneSpace.Add(body);
             */
         }
 

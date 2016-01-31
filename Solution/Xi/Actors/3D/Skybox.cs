@@ -13,7 +13,7 @@ namespace Xi
         /// Create a Skybox.
         /// </summary>
         /// <param name="game">The game.</param>
-        public Skybox(XiGame game) : base(game, false)
+        public Skybox(XiGame game) : base(game)
         {
             surface = new SkyboxSurface(game, this);
         }

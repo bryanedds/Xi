@@ -17,8 +17,7 @@ namespace Xi
         /// Create a BaseModel.
         /// </summary>
         /// <param name="game">The game.</param>
-        public BaseModel(XiGame game)
-            : base(game, true)
+        public BaseModel(XiGame game) : base(game)
         {
             SetUpModel();
         }
@@ -120,22 +119,6 @@ namespace Xi
             surfaces.Add(this.surfaces);
             return surfaces;
         }
-
-        /// <inheritdoc />
-        protected override void OnEnabledChanged()
-        {
-            base.OnEnabledChanged();
-            RefreshModelPhysicsEnabled();
-        }
-
-        /// <inheritdoc />
-        protected override void OnPhysicsEnabledChanged()
-        {
-            base.OnPhysicsEnabledChanged();
-            RefreshModelPhysicsEnabled();
-        }
-
-        /// <inheritdoc />
         protected override void GetMountPointTransformHook(int mountPoint, out Matrix transform)
         {
             if (IsBoneMount(mountPoint)) GetBoneAbsoluteWorld(mountPoint - 1, out transform);
@@ -190,7 +173,6 @@ namespace Xi
             modelPhysics = CreateModelPhysics();
             Entity = modelPhysics.Entity;
             Entity.IsAlwaysActive = Game.Editing;
-            RefreshModelPhysicsEnabled();
         }
 
         private void TearDownSurfaces()
@@ -203,11 +185,6 @@ namespace Xi
         {
             if (modelPhysics != null) modelPhysics.Dispose();
             modelPhysics = null;
-        }
-
-        private void RefreshModelPhysicsEnabled()
-        {
-            modelPhysics.Enabled = Enabled && PhysicsEnabled && Allocated;
         }
 
         private void RefreshBonesAbsolute()

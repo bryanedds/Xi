@@ -19,10 +19,8 @@ namespace Xi
         /// Create an Actor3D.
         /// </summary>
         /// <param name="game">The game.</param>
-        /// <param name="physicsEnabled">Is the actor's physics enabled?</param>
-        public Actor3D(XiGame game, bool physicsEnabled) : base(game)
+        public Actor3D(XiGame game) : base(game)
         {
-            _physicsEnabled = physicsEnabled; // circumvent property to avoid virtual call
             SetUpEntity();
             game.Scene.AddActor(this);
         }
@@ -352,21 +350,6 @@ namespace Xi
         public bool Amorphous { get { return Entity is AmorphousEntity; } }
 
         /// <summary>
-        /// Is the actor's physics enabled?
-        /// </summary>
-        public bool PhysicsEnabled
-        {
-            get { return _physicsEnabled; }
-            set
-            {
-                if (_physicsEnabled == value) return;
-                _physicsEnabled = value;
-                OnPhysicsEnabledChanged();
-                Game.RaiseSimulationSelectionChanged(); // refresh property grid
-            }
-        }
-
-        /// <summary>
         /// The physics entity.
         /// May be set to null (to reset it), but will never return null.
         /// </summary>
@@ -466,7 +449,6 @@ namespace Xi
         {
             return
                 base.IsHidden(property) ||
-                !PhysicsEnabled &&
                 GetType().GetPropertyFast(property.Name).HasCustomAttributeFast(typeof(PhysicsBrowseAttribute));
         }
 
@@ -481,7 +463,7 @@ namespace Xi
         protected override void VisualizeHook(GameTime gameTime)
         {
             base.VisualizeHook(gameTime);
-            KeepBoundingBoxUpToDateWhilePhysicsIsDisabled(); // HACK
+            Entity.ForceBoundingBoxRefit(0);
         }
 
         /// <summary>
@@ -500,14 +482,10 @@ namespace Xi
             GetWorldTransform(out transform);
         }
 
-        /// <summary>
-        /// Called when the physics are enabled or disabled.
-        /// </summary>
-        protected virtual void OnPhysicsEnabledChanged() { }
-
         private void SetUpEntity()
         {
             _entity = new AmorphousEntity();
+            _entity.IsActive = true;
             _entity.IsAffectedByGravity = true;
             _entity.Mass = 1024;
             _entity.Tag = this;
@@ -546,12 +524,6 @@ namespace Xi
             target.Tag = source.Tag;
         }
 
-        private void KeepBoundingBoxUpToDateWhilePhysicsIsDisabled()
-        {
-            if (!Game.PhysicsEnabled || !PhysicsEnabled || !Enabled)
-                Entity.ForceBoundingBoxRefit(0);
-        }
-
         private Vector3 AdjustPositionForCenterOfMassOffsetBug()
         {
             return Position += CenterOfMassOffset;
@@ -559,6 +531,5 @@ namespace Xi
 
         private Entity _entity;
         private Vector3 _orientationEularDegrees;
-        private bool _physicsEnabled = true;
     }
 }

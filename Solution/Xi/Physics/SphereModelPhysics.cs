@@ -24,6 +24,7 @@ namespace Xi
             model.GetVerticesAndIndices(out vertices, out indices);
             BoundingSphere boundingSphere = BoundingSphere.CreateFromPoints(vertices);
             body = new Sphere(position, boundingSphere.Radius, mass);
+            game.SceneSpace.Add(body);
         }
 
         /// <summary>

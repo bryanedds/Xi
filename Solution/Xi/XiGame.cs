@@ -57,14 +57,13 @@ namespace Xi
 
             // set up BEPU
             sceneSpace = new Space();
-            sceneSpace.SimulationSettings.MotionUpdate.Gravity = new Vector3(0, -20, 0);
+            sceneSpace.SimulationSettings.MotionUpdate.Gravity = new Vector3(0, -100, 0);
             if (Environment.ProcessorCount > 1)
             {
-                for (int i = 0; i < Environment.ProcessorCount; i++) sceneSpace.ThreadManager.AddThread();
+                for (int i = 0; i < Environment.ProcessorCount; ++i) sceneSpace.ThreadManager.AddThread();
                 sceneSpace.UseMultithreadedUpdate = true;
             }
             sceneSpace.SimulationSettings.CollisionResponse.Iterations = 8;
-            PhysicsEnabled = false;
         }
 
         /// <summary>

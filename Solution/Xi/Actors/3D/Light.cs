@@ -12,7 +12,7 @@ namespace Xi
         /// Create a Light3D object.
         /// </summary>
         /// <param name="game">The game.</param>
-        public Light(XiGame game) : base(game, false) { }
+        public Light(XiGame game) : base(game) { }
     }
 
     /// <summary>

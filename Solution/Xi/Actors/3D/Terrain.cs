@@ -12,7 +12,7 @@ namespace Xi
         /// <summary>
         /// Create a Terrain3D.
         /// </summary>
-        public Terrain(XiGame game) : base(game, false)
+        public Terrain(XiGame game) : base(game)
         {
             SetUpTerrain();
         }

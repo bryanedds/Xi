@@ -14,7 +14,7 @@ namespace Xi
         /// Create a Water3D object.
         /// </summary>
         /// <param name="game">The game.</param>
-        public Water(XiGame game) : base(game, false)
+        public Water(XiGame game) : base(game)
         {
             surface = new WaterSurface(game, this);
             Position = new Vector3(0, 10, 0); // nice offset from bottom of terrain

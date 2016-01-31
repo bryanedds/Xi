@@ -416,11 +416,17 @@ namespace XiEditor
             AddContext(actorUIContext = new ActorUIContext(game, this));
             AddContext(facetContext = new FacetContext(game, this));
             AddContext(new CameraContext(game, this));
-            game.SimulationSelectionChanged += () => CurrentContext.EndDragging();
+            game.SimulationSelectionChanged += game_SimulationSelectionChanged;
+        }
+
+        private void game_SimulationSelectionChanged()
+        {
+            CurrentContext.EndDragging();
         }
 
         private void TearDownContexts()
         {
+            game.SimulationSelectionChanged -= game_SimulationSelectionChanged;
             foreach (ControllerContext context in contexts) context.Dispose();
             contexts.Clear();
         }

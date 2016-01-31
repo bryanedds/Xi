@@ -97,7 +97,6 @@
     <AffectedByGravity>True</AffectedByGravity>
     <CCDEnabled>False</CCDEnabled>
     <FixedRotation>False</FixedRotation>
-    <PhysicsEnabled>True</PhysicsEnabled>
     <Sensor>False</Sensor>
   </Xi.Actor2D.Default>
   
@@ -129,7 +128,6 @@
     <Mass>1024</Mass>
     <StaticFriction>0.75</StaticFriction>
     <AffectedByGravity>True</AffectedByGravity>
-    <PhysicsEnabled>True</PhysicsEnabled>
   </Xi.Actor3D.Default>
   
   <Xi.Actor3D.PhysicsDisabled.Default>
@@ -137,7 +135,6 @@
     <AllowedPenetration>0</AllowedPenetration>
     <CollisionMargin>0</CollisionMargin>
     <Density>0</Density>
-    <PhysicsEnabled>False</PhysicsEnabled>
   </Xi.Actor3D.PhysicsDisabled.Default>
   
   <Xi.Light.Default>
