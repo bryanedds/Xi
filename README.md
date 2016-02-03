@@ -32,7 +32,6 @@ The engine is currently mostly documented in code using C# documentation. There 
 
 **Todo for Alpha Version**
 
-- Add physics (including pill shape) to animated model (or create new actor type Character3D with character physics).
 - Add water physics.
 - Remove rounding on shadow edges.
 - Add 2D physics debug drawing (along with 2D and UI editor selection drawing).
