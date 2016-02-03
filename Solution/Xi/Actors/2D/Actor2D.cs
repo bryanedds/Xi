@@ -373,14 +373,6 @@ namespace Xi
         }
 
         /// <inheritdoc />
-        protected override bool IsHidden(PropertyDescriptor property)
-        {
-            return
-                base.IsHidden(property) ||
-                GetType().GetPropertyFast(property.Name).HasCustomAttributeFast(typeof(PhysicsBrowseAttribute));
-        }
-
-        /// <inheritdoc />
         protected override void OnDeallocated()
         {
             base.OnDeallocated();

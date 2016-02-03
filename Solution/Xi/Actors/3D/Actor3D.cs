@@ -449,7 +449,7 @@ namespace Xi
         {
             return
                 base.IsHidden(property) ||
-                GetType().GetPropertyFast(property.Name).HasCustomAttributeFast(typeof(PhysicsBrowseAttribute));
+                (Amorphous && GetType().GetPropertyFast(property.Name).HasCustomAttributeFast(typeof(PhysicsBrowseAttribute)));
         }
 
         /// <inheritdoc />

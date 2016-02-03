@@ -201,6 +201,7 @@
     <Compile Include="Message\Message.cs" />
     <Compile Include="Physics\BodyShape.cs" />
     <Compile Include="Physics\BoxModelPhysics.cs" />
+    <Compile Include="Physics\CapsuleModelPhysics.cs" />
     <Compile Include="Physics\TerrainPhysics.cs" />
     <Compile Include="Physics\IModelPhysics.cs" />
     <Compile Include="Physics\PhysicsBrowseAttribute.cs" />

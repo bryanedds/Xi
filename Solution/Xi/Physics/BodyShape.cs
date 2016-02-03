@@ -7,6 +7,8 @@
     {
         Box,
         Sphere,
-        StaticMesh
+        Capsule,
+        StaticMesh,
+        Amorphous
     }
 }
