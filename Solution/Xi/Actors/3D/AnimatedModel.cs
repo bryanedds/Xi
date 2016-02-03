@@ -170,7 +170,6 @@ namespace Xi
                 case BodyShape.Box: return new BoxModelPhysics(Game, _skinnedModel.Model, Position, Mass);
                 case BodyShape.Sphere: return new SphereModelPhysics(Game, _skinnedModel.Model, Position, Mass);
                 case BodyShape.Capsule: return new CapsuleModelPhysics(Game, _skinnedModel.Model, Position, Mass);
-                case BodyShape.StaticMesh: return new StaticMeshModelPhysics(Game, _skinnedModel.Model, Position, Mass);
                 case BodyShape.Amorphous: return null;
                 default: throw new ArgumentException("Invalid body shape '" + BodyShape.ToString() + "'.");
             }

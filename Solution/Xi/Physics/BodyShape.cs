@@ -8,7 +8,6 @@
         Box,
         Sphere,
         Capsule,
-        StaticMesh,
         Amorphous
     }
 }

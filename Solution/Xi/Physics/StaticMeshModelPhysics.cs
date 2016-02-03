@@ -30,6 +30,33 @@ namespace Xi
         }
 
         /// <summary>
+        /// The friction.
+        /// </summary>
+        public float Friction
+        {
+            get { return body.Friction; }
+            set { body.Friction = value; }
+        }
+
+        /// <summary>
+        /// The bounciness.
+        /// </summary>
+        public float Bounciness
+        {
+            get { return body.Bounciness; }
+            set { body.Bounciness = value; }
+        }
+
+        /// <summary>
+        /// The collision rules.
+        /// </summary>
+        public EntityCollisionRules CollisionRules
+        {
+            get { return body.CollisionRules; }
+            set { body.CollisionRules = value; }
+        }
+
+        /// <summary>
         /// The static mesh entity.
         /// </summary>
         public Entity Entity { get { return null; } }
