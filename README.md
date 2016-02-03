@@ -4,7 +4,7 @@ This is an old 3D game engine I made for XNA 3.1.
 
 I'm updating some bits for resume fodder, but I don't see this code as worth using directly.
 
-![Screenshot](XiGameEngine/Promotional/XiEditor.png?raw=true "A screenshot of Xi's world editor.")
+![Screenshot](https://raw.githubusercontent.com/bryanedds/XiGameEngine/master/Promotional/XiEditor.png "A screenshot of Xi's world editor.")
 
 ##Xi Game Engine Feature / Motivation List
 
