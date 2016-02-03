@@ -4,6 +4,8 @@ This is an old 3D game engine I made for XNA 3.1.
 
 I'm updating some bits for resume fodder, but I don't see this code as worth using directly.
 
+![Screenshot](XiGameEngine/Promotional/XiEditor.png?raw=true "A screenshot of Xi's world editor.")
+
 ##Xi Game Engine Feature / Motivation List
 
 **Game-centric Object Architecture** - Having worked on several games, I factored out a common object structure that applies to all the ones I've worked on. It consists of an Application object, a Screen object, ScreenTransition objects (transition in and transition out), ActorGroup objects, and finally, the main object, Actor. All of these objects are serializable at any time, and little to no custom serialization code need be written for user objects that extend these. A big problem with Ox is that it exposed a lot of functionality to the user, but it gave the user no idea of how to structure an actual application. By providing this object model out of the box, the developer gets started clearly and quickly.
