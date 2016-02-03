@@ -83,7 +83,11 @@ namespace Xi
                 IAnimationController newAnimationController = new AnimationController(newSkinnedModel.SkeletonBones);
                 _skinnedModel = newSkinnedModel;
                 _animationController = newAnimationController;
+                _animationController.LoopEnabled = true;
                 _skinnedModelFileName = value;
+                AnimationClip clip;
+                if (_skinnedModel.AnimationClips.TryGetValue("Idle", out clip))
+                    _animationController.PlayClip(clip);
             }
         }
 
@@ -109,30 +113,6 @@ namespace Xi
             Matrix worldTransform;
             GetWorldTransform(out worldTransform);
             Matrix.Multiply(ref boneAbsolute, ref worldTransform, out boneTransform);
-        }
-
-        private void ResetPhysics()
-        {
-            TearDownPhysics();
-            SetUpPhysics();
-        }
-
-        private void SetUpModel()
-        {
-            surface = new AnimatedModelSurface(Game, this);
-            ResetPhysics();
-        }
-
-        private void SetUpPhysics()
-        {
-            modelPhysics = CreateModelPhysics();
-            Entity = modelPhysics != null ? modelPhysics.Entity : new AmorphousEntity();
-        }
-
-        private void TearDownPhysics()
-        {
-            if (modelPhysics != null) modelPhysics.Dispose();
-            modelPhysics = null;
         }
 
         /// <inheritdoc />
@@ -161,6 +141,30 @@ namespace Xi
         {
             if (IsBoneMount(mountPoint)) GetBoneAbsoluteWorld(mountPoint - 1, out transform);
             else base.GetMountPointTransformHook(mountPoint, out transform);
+        }
+
+        private void ResetPhysics()
+        {
+            TearDownPhysics();
+            SetUpPhysics();
+        }
+
+        private void SetUpModel()
+        {
+            surface = new AnimatedModelSurface(Game, this);
+            ResetPhysics();
+        }
+
+        private void SetUpPhysics()
+        {
+            modelPhysics = CreateModelPhysics();
+            Entity = modelPhysics != null ? modelPhysics.Entity : new AmorphousEntity();
+        }
+
+        private void TearDownPhysics()
+        {
+            if (modelPhysics != null) modelPhysics.Dispose();
+            modelPhysics = null;
         }
 
         private IModelPhysics CreateModelPhysics()
