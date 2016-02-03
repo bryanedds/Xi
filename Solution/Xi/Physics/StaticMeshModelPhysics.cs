@@ -25,8 +25,8 @@ namespace Xi
             int[] indices;
             model.GetVerticesAndIndices(out vertices, out indices);
             TriangleMesh triangleMesh = new TriangleMesh(vertices, indices);
-            staticTriangleGroup = new StaticTriangleGroup(triangleMesh);
-            game.SceneSpace.Add(staticTriangleGroup);
+            body = new StaticTriangleGroup(triangleMesh);
+            game.SceneSpace.Add(body);
         }
 
         /// <summary>
@@ -34,7 +34,13 @@ namespace Xi
         /// </summary>
         public Entity Entity { get { return null; } }
 
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing) game.SceneSpace.Remove(body);
+            base.Dispose(disposing);
+        }
+
         private readonly XiGame game;
-        private StaticTriangleGroup staticTriangleGroup;
+        private StaticTriangleGroup body;
     }
 }

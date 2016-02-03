@@ -32,6 +32,12 @@ namespace Xi
         /// </summary>
         public Entity Entity { get { return body; } }
 
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing) game.SceneSpace.Remove(body);
+            base.Dispose(disposing);
+        }
+
         private readonly XiGame game;
         private Entity body;
     }

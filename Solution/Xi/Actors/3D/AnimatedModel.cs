@@ -1,3 +1,4 @@
+using System;
 using System.ComponentModel;
 using System.Drawing.Design;
 using Microsoft.Xna.Framework;
@@ -18,8 +19,21 @@ namespace Xi
         public AnimatedModel(XiGame game) : base(game)
         {
             SkinnedModelFileName = "Xi/3D/PlayerMarine";
-            // populate surface AFTER becoming an otherwise valid object
-            surface = new AnimatedModelSurface(Game, this);
+            SetUpModel();
+        }
+
+        /// <summary>
+        /// The shape of the physics body.
+        /// </summary>
+        public BodyShape BodyShape
+        {
+            get { return _bodyShape; }
+            set
+            {
+                if (_bodyShape == value) return; // OPTIMIZATION: avoid ResetPhysics
+                _bodyShape = value;
+                ResetPhysics();
+            }
         }
 
         /// <summary>
@@ -97,13 +111,41 @@ namespace Xi
             Matrix.Multiply(ref boneAbsolute, ref worldTransform, out boneTransform);
         }
 
+        private void ResetPhysics()
+        {
+            TearDownPhysics();
+            SetUpPhysics();
+        }
+
+        private void SetUpModel()
+        {
+            surface = new AnimatedModelSurface(Game, this);
+            ResetPhysics();
+        }
+
+        private void SetUpPhysics()
+        {
+            modelPhysics = CreateModelPhysics();
+            Entity = modelPhysics != null ? modelPhysics.Entity : new AmorphousEntity();
+        }
+
+        private void TearDownPhysics()
+        {
+            if (modelPhysics != null) modelPhysics.Dispose();
+            modelPhysics = null;
+        }
+
         /// <inheritdoc />
         protected override AnimatedModelSurface SurfaceHook { get { return surface; } }
 
         /// <inheritdoc />
         protected override void Destroy(bool destroying)
         {
-            if (destroying) surface.Dispose();
+            if (destroying)
+            {
+                surface.Dispose();
+                TearDownPhysics();
+            }
             base.Destroy(destroying);
         }
 
@@ -121,6 +163,19 @@ namespace Xi
             else base.GetMountPointTransformHook(mountPoint, out transform);
         }
 
+        private IModelPhysics CreateModelPhysics()
+        {
+            switch (BodyShape)
+            {
+                case BodyShape.Box: return new BoxModelPhysics(Game, _skinnedModel.Model, Position, Mass);
+                case BodyShape.Sphere: return new SphereModelPhysics(Game, _skinnedModel.Model, Position, Mass);
+                case BodyShape.Capsule: return new CapsuleModelPhysics(Game, _skinnedModel.Model, Position, Mass);
+                case BodyShape.StaticMesh: return new StaticMeshModelPhysics(Game, _skinnedModel.Model, Position, Mass);
+                case BodyShape.Amorphous: return null;
+                default: throw new ArgumentException("Invalid body shape '" + BodyShape.ToString() + "'.");
+            }
+        }
+
         private bool IsBoneMount(int mountPoint)
         {
             return
@@ -128,9 +183,11 @@ namespace Xi
                 mountPoint < SkinnedModel.SkeletonBones.Count + 1;
         }
 
-        private readonly AnimatedModelSurface surface;
+        private AnimatedModelSurface surface;
+        private IModelPhysics modelPhysics;
         private IAnimationController _animationController;
         private SkinnedModel _skinnedModel;
         private string _skinnedModelFileName;
+        private BodyShape _bodyShape;
     }
 }
