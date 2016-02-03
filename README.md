@@ -32,13 +32,12 @@ The engine is currently mostly documented in code using C# documentation. There 
 
 **Todo for Alpha Version**
 
-- Add terrain physics.
-- Add character physics to animated model (or create new actor type Character3D with character physics).
+- Add physics (including pill shape) to animated model (or create new actor type Character3D with character physics).
 - Add water physics.
 - Remove rounding on shadow edges.
 - Add 2D physics debug drawing (along with 2D and UI editor selection drawing).
 - Add 'Select Same Overlay' to editor.
 - Do the more important TODOs.
 - Port to XNA 4.0 (completely re-modify XNAnimation for Xi from scratch using current diff).
-- Implement actor grouping in the editor.
+- Group actors by type in the editor.
 - Build a sample game.
