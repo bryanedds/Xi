@@ -173,7 +173,6 @@ namespace Xi
         {
             modelPhysics = CreateModelPhysics();
             Entity = modelPhysics != null ? modelPhysics.Entity : new AmorphousEntity();
-            Entity.IsAlwaysActive = Game.Editing;
         }
 
         private void TearDownSurfaces()

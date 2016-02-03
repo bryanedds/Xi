@@ -13,10 +13,5 @@ namespace Xi
         /// May be null.
         /// </summary>
         Entity Entity { get; }
-
-        /// <summary>
-        /// Are the physics enabled?
-        /// </summary>
-        bool Enabled { get; set; }
     }
 }

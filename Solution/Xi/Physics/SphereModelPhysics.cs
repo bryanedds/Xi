@@ -32,31 +32,6 @@ namespace Xi
         /// </summary>
         public Entity Entity { get { return body; } }
 
-        /// <summary>
-        /// Are the physics enabled?
-        /// </summary>
-        public bool Enabled
-        {
-            get { return body.Space != null; }
-            set
-            {
-                if (Enabled == value) return;
-                if (value) game.SceneSpace.Add(body);
-                else game.SceneSpace.Remove(body);
-            }
-        }
-
-        /// <inheritdoc />
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                Enabled = false;
-                body = null;
-            }
-            base.Dispose(disposing);
-        }
-
         private readonly XiGame game;
         private Entity body;
     }

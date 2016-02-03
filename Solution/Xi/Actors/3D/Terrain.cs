@@ -1,6 +1,7 @@
 using System.ComponentModel;
 using System.Drawing.Design;
 using Microsoft.Xna.Framework;
+using BEPUphysics;
 
 namespace Xi
 {
@@ -151,6 +152,36 @@ namespace Xi
             set { surface.SmoothingFactor = value; }
         }
 
+        /// <summary>
+        /// The of friction.
+        /// </summary>
+        public float Friction
+        {
+            get { return physics.Friction; }
+            set { physics.Friction = value; }
+        }
+
+        /// <summary>
+        /// The bounciness.
+        /// </summary>
+        public new float Bounciness
+        {
+            get { return physics.Bounciness; }
+            set { physics.Bounciness = value; }
+        }
+
+        /// <summary>
+        /// The collision rules.
+        /// TODO: consider exposing individual rules to make them available in the editor (if that
+        /// even makes sense).
+        /// </summary>
+        [Browsable(false), IgnoreSerialization]
+        public new EntityCollisionRules CollisionRules
+        {
+            get { return physics.CollisionRules; }
+            set { physics.CollisionRules = value; }
+        }
+
         /// <inheritdoc />
         protected override TerrainSurface SurfaceHook { get { return surface; } }
 
@@ -194,7 +225,6 @@ namespace Xi
         {
             physics = new TerrainPhysics(Game, this);
             Entity = physics.Entity;
-            Entity.IsAlwaysActive = Game.Editing;
         }
 
         private void TearDownTerrain()

@@ -173,6 +173,24 @@ namespace Xi
         }
 
         /// <summary>
+        /// Whether the entity's rotation is fixed.
+        /// </summary>
+        [PhysicsBrowse]
+        public bool FixedRotation
+        {
+            get { return Entity.LocalInertiaTensorInverse == new Matrix(); }
+            set
+            {
+                if (value)
+                {
+                    Entity.LocalInertiaTensorInverse = new Matrix();
+                    Entity.OrientationMatrix = Matrix.Identity;
+                }
+                else Entity.LocalInertiaTensorInverse = Matrix.Identity;
+            }
+        }
+
+        /// <summary>
         /// The angular momentum.
         /// </summary>
         [PhysicsBrowse]

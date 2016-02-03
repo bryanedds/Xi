@@ -36,30 +36,36 @@ namespace Xi
         }
 
         /// <summary>
+        /// The friction.
+        /// </summary>
+        public float Friction
+        {
+            get { return body.Friction; }
+            set { body.Friction = value; }
+        }
+
+        /// <summary>
+        /// The bounciness.
+        /// </summary>
+        public float Bounciness
+        {
+            get { return body.Bounciness; }
+            set { body.Bounciness = value; }
+        }
+
+        /// <summary>
+        /// The collision rules.
+        /// </summary>
+        public EntityCollisionRules CollisionRules
+        {
+            get { return body.CollisionRules; }
+            set { body.CollisionRules = value; }
+        }
+
+        /// <summary>
         /// The static mesh entity.
         /// </summary>
         public Entity Entity { get { return null; } }
-
-        /// <summary>
-        /// Are the physics enabled?
-        /// </summary>
-        public bool Enabled
-        {
-            get { return body.Space != null; }
-            set
-            {
-                if (Enabled == value) return;
-                if (value) game.SceneSpace.Add(body);
-                else game.SceneSpace.Remove(body);
-            }
-        }
-
-        /// <inheritdoc />
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing) Enabled = false;
-            base.Dispose(disposing);
-        }
 
         private readonly XiGame game;
         private readonly BEPUphysics.Terrain body;

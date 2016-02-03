@@ -34,31 +34,6 @@ namespace Xi
         /// </summary>
         public Entity Entity { get { return null; } }
 
-        /// <summary>
-        /// Are the physics enabled?
-        /// </summary>
-        public bool Enabled
-        {
-            get { return staticTriangleGroup.Space != null; }
-            set
-            {
-                if (Enabled == value) return;
-                if (value) game.SceneSpace.Add(staticTriangleGroup);
-                else game.SceneSpace.Remove(staticTriangleGroup);
-            }
-        }
-
-        /// <inheritdoc />
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                Enabled = false;
-                staticTriangleGroup = null;
-            }
-            base.Dispose(disposing);
-        }
-
         private readonly XiGame game;
         private StaticTriangleGroup staticTriangleGroup;
     }
